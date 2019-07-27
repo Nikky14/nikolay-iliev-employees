@@ -41,8 +41,8 @@ namespace Employees
                         {
                             var employee = new Employee()
                             {
-                                EmpID = fields[0],
-                                ProjectID = fields[1],
+                                EmpID = ParseInts(fields[0]),
+                                ProjectID = ParseInts(fields[1]),
                                 DateFrom = ParseDates(fields[2]),
                                 DateTo = ParseDates(fields[3])
                             };
@@ -70,7 +70,7 @@ namespace Employees
         /// <summary>
         /// Parses string date formats
         /// </summary>
-        /// <param name="date"></param>
+        /// <param name="date">Input string date format</param>
         /// <returns>DateTime</returns>
         private DateTime ParseDates(string date)
         {
@@ -92,7 +92,26 @@ namespace Employees
             }
             else
             {
-                throw new Exception("Date incorrect format, please use one the following format: yyyy-MM-dd,MM/dd/yyyy,M/dd/yyyy,MM/d/yyyy");
+                throw new Exception("Incorrect date format, please use one the following format: yyyy-MM-dd,MM/dd/yyyy,M/dd/yyyy,MM/d/yyyy");
+            }
+        }
+
+        /// <summary>
+        /// Parses string number format.
+        /// </summary>
+        /// <param name="input">Input string number format</param>
+        /// <returns>int</returns>
+        private int ParseInts(string input)
+        {
+            bool result = int.TryParse(input, out int number);
+
+            if (result)
+            {
+                return number;
+            }
+            else
+            {
+                throw new Exception("Incorrect string format, provide valid string representation of number");
             }
         }
 

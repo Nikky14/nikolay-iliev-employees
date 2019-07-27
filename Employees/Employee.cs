@@ -11,8 +11,8 @@ namespace Employees
     /// </summary>
     internal class Employee
     {
-        public string EmpID { get; set; }
-        public string ProjectID { get; set; }
+        public int EmpID { get; set; }
+        public int ProjectID { get; set; }
         public DateTime DateFrom { get; set; }
         public DateTime DateTo { get; set; }
         public int DaysWorked { get; set; }
