@@ -9,7 +9,7 @@ using System.Globalization;
 
 namespace Employees
 {
-    internal class EmployeeManager
+    internal class EmployeeManager : IEmployeeManager
     {
         private List<Employee> employees = new List<Employee>();
 
