@@ -13,5 +13,6 @@ namespace Employees
     {
         public const int NUMBER_REQUIRED_COLUMNS = 4;
         public const int NUMBER_OF_EMPLOYEES_TO_BE_SHOWN = 2;
+        public const char LETTER = 'A';
     }
 }
