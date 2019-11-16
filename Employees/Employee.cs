@@ -17,4 +17,9 @@ namespace Employees
         public DateTime DateTo { get; set; }
         public int DaysWorked { get; set; }
     }
+
+    internal class Test
+    {
+        public int Id { get; set; }
+    }
 }

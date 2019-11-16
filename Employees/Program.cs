@@ -11,6 +11,7 @@ namespace Employees
     {
         static void Main(string[] args)
         {
+            // Add a comment
             IEmployeeManager client = new EmployeeManager();
             client.Run();
         }
