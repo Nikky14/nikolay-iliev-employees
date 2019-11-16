@@ -15,6 +15,7 @@ namespace Employees
             IEmployeeManager client = new EmployeeManager();
             client.Run();
 
+            // Thifkfkfkfk
             Console.WriteLine("Hi there!");
         }
     }
